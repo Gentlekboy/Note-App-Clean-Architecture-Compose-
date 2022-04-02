@@ -12,7 +12,6 @@
         <activity
             android:name=".feature_note.presentation.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.CleanAchitectureNoteApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
