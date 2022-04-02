@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gentlekboy.cleanachitecturenoteapp">
+    package="com.gentlekboy.cleanarchitecturenoteapp">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CleanAchitectureNoteApp">
         <activity
-            android:name=".feature_note.presentation.MainActivity"
+            android:name="com.gentlekboy.cleanarchitecturenoteapp.feature_note.presentation.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.CleanAchitectureNoteApp">
             <intent-filter>
