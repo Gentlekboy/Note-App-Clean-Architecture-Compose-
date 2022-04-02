@@ -1,4 +1,4 @@
-package com.gentlekboy.cleanachitecturenoteapp.ui.theme
+package com.gentlekboy.cleanarchitecturenoteapp.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
