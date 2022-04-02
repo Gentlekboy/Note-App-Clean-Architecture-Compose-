@@ -1,4 +1,4 @@
-package com.gentlekboy.cleanachitecturenoteapp.ui.theme
+package com.gentlekboy.cleanarchitecturenoteapp.ui.theme
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
