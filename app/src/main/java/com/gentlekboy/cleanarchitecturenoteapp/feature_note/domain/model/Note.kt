@@ -1,4 +1,4 @@
-package com.gentlekboy.cleanachitecturenoteapp.feature_note.domain.model
+package com.gentlekboy.cleanarchitecturenoteapp.feature_note.domain.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
