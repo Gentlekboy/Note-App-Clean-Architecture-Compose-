@@ -7,6 +7,9 @@ import com.gentlekboy.cleanarchitecturenoteapp.feature_note.domain.util.OrderTyp
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
+/**
+ * Use case class to get a list of notes by [orderType] and [noteOrder]
+ */
 class GetNotes(private val noteRepository: NoteRepository) {
     operator fun invoke(noteOrder: NoteOrder = NoteOrder.Date(OrderType.Descending)): Flow<List<Note>> {
         return noteRepository.getNotes().map { notes ->

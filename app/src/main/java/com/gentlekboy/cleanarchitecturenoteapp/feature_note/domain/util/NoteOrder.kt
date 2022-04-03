@@ -1,5 +1,8 @@
 package com.gentlekboy.cleanarchitecturenoteapp.feature_note.domain.util
 
+/**
+ * Sealed class for determining ordering by [Title], [Date] or [Colour]
+ */
 sealed class NoteOrder(val orderType: OrderType) {
     class Title(orderType: OrderType) : NoteOrder(orderType)
     class Date(orderType: OrderType) : NoteOrder(orderType)
