@@ -17,3 +17,8 @@ data class Note(
         val noteColours = listOf(RedOrange, LightGreen, Violet, BabyBlue, RedPink)
     }
 }
+
+/**
+ * Class to throw an exception when validating the addition of a new note to the local database
+ */
+class InvalidNoteException(message: String) : Exception(message)
