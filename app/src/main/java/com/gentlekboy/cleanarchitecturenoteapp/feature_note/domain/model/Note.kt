@@ -7,13 +7,18 @@ import com.gentlekboy.cleanarchitecturenoteapp.ui.theme.*
 @Entity
 data class Note(
     @PrimaryKey
-    val id: Int,
+    val id: Int? = null,
     val title: String,
     val content: String,
     val timeStamp: Long,
-    val colour: Int? = null
+    val colour: Int
 ) {
     companion object {
         val noteColours = listOf(RedOrange, LightGreen, Violet, BabyBlue, RedPink)
     }
 }
+
+/**
+ * Class to throw an exception when validating the addition of a new note to the local database
+ */
+class InvalidNoteException(message: String) : Exception(message)
