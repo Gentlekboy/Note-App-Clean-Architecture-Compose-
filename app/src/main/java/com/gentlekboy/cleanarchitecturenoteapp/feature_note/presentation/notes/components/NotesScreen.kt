@@ -19,6 +19,7 @@ import androidx.navigation.NavController
 import com.gentlekboy.cleanarchitecturenoteapp.feature_note.domain.model.Note
 import com.gentlekboy.cleanarchitecturenoteapp.feature_note.presentation.notes.NotesEvent
 import com.gentlekboy.cleanarchitecturenoteapp.feature_note.presentation.notes.NotesViewModel
+import com.gentlekboy.cleanarchitecturenoteapp.feature_note.presentation.util.Screens
 import kotlinx.coroutines.launch
 
 @Composable
@@ -33,7 +34,7 @@ fun NotesScreen(
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(
-                onClick = { },
+                onClick = { navController.navigate(Screens.AddEditNoteScreen.route) },
                 backgroundColor = MaterialTheme.colors.primary
             ) {
                 Icon(imageVector = Icons.Default.Add, contentDescription = "Add A Note")
@@ -79,7 +80,11 @@ fun NotesScreen(
                         note = note,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .clickable { },
+                            .clickable {
+                                navController.navigate(
+                                    Screens.AddEditNoteScreen.route + "?noteId=${note.id}&noteColour=${note.colour}"
+                                )
+                            },
                         onDeleteClick = {
                             viewModel.onEvent(NotesEvent.DeleteNote(note))
                             scope.launch {
